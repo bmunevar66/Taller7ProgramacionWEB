@@ -13,7 +13,7 @@ if (!nombre || !email || !mensaje){
     return;
 }    
 //Validar formato de email
-const emailNO = /^[^\s@[^\s@]+\.[^\s@]+$/];
+const emailNO = /^[^\s@[^\s@]+\.[^\s@]+$/;
 if (!emailNO.test(email)){
     rsta.textContent='Introduce un correo valido';
     return;

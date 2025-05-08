@@ -6,13 +6,21 @@ function enviar() {
     //viendo la linea 6 en terminos de seguridad, esta puede permitir la ejecucion de codigos maliciosos
     //hay que evitar las inserciones directas, entonces se cambia innerHTML por textContect, y se arregla el mensaje
     document.getElementById('msg').textContent = 'mensaje recibido con exito';
+
+//Validacion de los campos
+if (!nombre || !email || !mensaje){
+    rsta.textContent='Debes completar todos los campos.';
+    return;
+}    
+//Validar formato de email
+const emailNO = /^[^\s@[^\s@]+\.[^\s@]+$/];
+if (!emailNO.test(email)){
+    rsta.textContent='Introduce un correo valido';
+    return;
 }
-//y se agrega una nueva funcion para la validacion de los datos del formulario
-function validarFormulario(){
-    let nombre = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    if(!nombre || !email){
-        alert('Los campos no pueden estar vacios');
-        return false;
-    }
-}return true;
+//Mensaje seguro sin Alert
+rsta.textContent='Gracias por contactarnos, ${name}. Te responderemos a ${email} pronto.';
+//limpiar el formulario
+document.getElementById('contact-form').requestFullscreen();
+}
+

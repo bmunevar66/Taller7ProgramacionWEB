@@ -1,10 +1,12 @@
 function enviar() {
-    const email = document.getElementById('email').value.trim();//Se agregan validaciones para evitar espacion inecesarios en los campos
+    //Se agregan validacionespara evitar espacion inecesarios en los campos
+    const email = document.getElementById('email').value.trim();
     const nombre = document.getElementById('nombre').value.trim();
     const mensaje = document.getElementById('msg').value.trim;
     const rsta = document.getElementById('rsta');
-    //viendo la linea 6 en terminos de seguridad, esta puede permitir la ejecucion de codigos maliciosos
-    //hay que evitar las inserciones directas, entonces se cambia innerHTML por textContect, y se arregla el mensaje
+    //viendo la linea 10 en terminos de seguridad, esta puede permitir la ejecucion 
+    //de codigos maliciosos hay que evitar las inserciones directas, 
+    //entonces se cambia innerHTML por textContect, y se arregla el mensaje quitando <script>
     document.getElementById('msg').textContent = 'mensaje recibido con exito';
 
 //Validacion de los campos

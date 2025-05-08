@@ -7,16 +7,18 @@
 <body>
     <h1>Contactate con nosotros!</h1>
     <form id="contact-form" onsubmit="enviar(); return false;">
-        <input type="text" placeholder="Nombre Completo" id="name" name="name" required maxlength="100"> <!--Se agrega tipos y atributos adecuados como
-        required y maxlength ya que los campos no tenian validacion de entrada, por lo que se podian enviar vacios, se corrigio
+        <input type="text" placeholder="Nombre Completo" id="name" name="name" required maxlength="100"> 
+        <!--Se agrega tipos y atributos adecuados como required y maxlength ya que los campos
+        no tenian validacion de entrada, por lo que se podian enviar vacios, se corrigio
         Tambien se agregan el placeholder para eliminar el label y se vea mejor-->
         <input type="text" placeholder="Correo Electronico" id="email" name="email" required>
         <textarea id="msg" placeholder="Escribe un mensaje" name="msg" required maxlength="500"></textarea>
 
         <button type="submit">Enviar</button>
     </form>
-    <div id="respuesta" aria-live="polite"></div><!--el mesnsaje que se muestra a el usuario no se mostraba,
-    se añadio un div con el aria-live para los mensajes del usuario, se corrigio y ahora si se muestra el mensaje-->
+    <div id="respuesta" aria-live="polite"></div><!--el mesnsaje que se muestra a el
+    usuario no se mostraba, se añadio un div con el aria-live para los mensajes del 
+    usuario, se corrigio y ahora si se muestra el mensaje-->
     <script src="contact.js"></script>
 </body>
 </html>
